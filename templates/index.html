@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiflow</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="/static/images/logo.png" alt="Logo" id="logo">
+        </header>
+        <aside>
+            <button id="choose-folder-button">Escolher Pasta</button>
+            <input type="file" id="choose-folder" webkitdirectory directory multiple style="display: none;">
+            <button id="create-playlist">Criar Playlist</button>
+            <button id="add-from-youtube">Adicionar do YouTube</button>
+            <button id="save-playlist">Salvar Playlist</button>
+            <button id="load-playlist">Carregar Playlist</button>
+            <button id="show-history">Ver Histórico</button>
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+        </aside>
+        <main>
+            <div id="controls">
+                <button id="previous">Anterior</button>
+                <button id="play-pause">Play/Pause</button>
+                <button id="next">Próxima</button>
+            </div>
+            <ul id="playlist"></ul>
+            <div id="current-music-info"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Audiflow</p>
+        </footer>
+    </div>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

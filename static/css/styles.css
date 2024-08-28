@@ -1,0 +1,64 @@
+body {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+        "header header"
+        "aside main";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #1C1C1C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 250px;
+    height: 75px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #2C2C2C;
+    padding: 20px;
+}
+
+aside button, aside input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: #3C3C3C;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#playlist {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#current-music-info {
+    text-align: center;
+    font-size: 18px;
+}
